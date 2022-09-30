@@ -1,4 +1,27 @@
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% created by milin
+%
+% a implementation for Chirp Spread Spectrum modulation
+%
+% credit to: 
+%   https://github.com/tapparelj/gr-lora_sdr
+%   https://github.com/rpp0/gr-lora
+%   https://github.com/jkadbear/LoRaPHY
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 function sig = css(bw,sf,symbol,fs,is_up)
+    % LoRa CSS modulator
+    %
+    % input:
+    %
+    %   bw: bandwidth [125khz, 250khz, 500khz]
+    %   sf: spreading factor [7, 8, 9, 10, 11, 12]
+    %   symbol: symbol that need to be modulated
+    %   fs: sampling frequency
+    %   is_up: boolean flag to determine up-chirp or not
+    %
+    % output:
+    %
+    %   sig: Generated chirp
     M = 2^sf;
     T = M/bw;
     if is_up
