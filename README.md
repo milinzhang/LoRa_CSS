@@ -6,7 +6,7 @@ a MATLAB implementation for Chirp Spread Spectrum modulation used in LoRa
 
 ### CSS modulation
 
-up-chirp:
+for up-chirp:
 
 ![eqn](https://github.com/milinzhang/LoRa_CSS/blob/main/eqn.svg)
 
